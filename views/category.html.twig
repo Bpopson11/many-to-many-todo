@@ -1,8 +1,12 @@
 <html>
 <head>
+      <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen"  charset="utf-8">
+      <link rel="stylesheet" href="/css/normalize.css">
     <title>To Do List</title>
 </head>
 <body>
+    <div class="container">
     <h1>{{ category.getName }}</h1>
 
     {% if tasks is not empty %}
@@ -30,5 +34,6 @@
     <p><a href="/categories/{{ category.getId }}/edit">Edit this category</a></p>
 
     <p><a href='/'>Home</a></p>
+    </div>
 </body>
 </html>

@@ -1,8 +1,12 @@
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" media="screen"  charset="utf-8">
+    <link rel="stylesheet" href="/css/normalize.css">
     <title>To Do List</title>
 </head>
 <body>
+    <div class="container">
     <h1>{{ task.getDescription }}</h1>
 
     {% if categories is not empty %}
@@ -28,5 +32,6 @@
     </form>
 
     <p><a href='/'>Home</a></p>
+</div>
 </body>
 </html>
