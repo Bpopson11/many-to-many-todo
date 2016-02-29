@@ -11,7 +11,7 @@
         <p>Here are all your tasks: </p>
         <ul>
           {% for task in tasks %}<!--for loop-->
-              <li>{{ task.getDescription }}</li>
+               <li><a href="/tasks/{{ task.getId }}">{{ task.getDescription }}</a></li>
           {% endfor %}
         </ul>
     {% endif %}
