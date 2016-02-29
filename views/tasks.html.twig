@@ -8,8 +8,10 @@
     <title>To Do List</title>
   </head>
   <body>
+      <div class="jumbotron">
+          <h1>Tasks</h1>
+      </div>
     <div class="container">
-    <h1>To Do List</h1>
 
     {% if tasks is not empty %} <!--if statement-->
         <p>Here are all your tasks: </p>
@@ -24,10 +26,10 @@
         <label for='description'>Task Description</label>
         <input id='description' name='description' type='text'>
 
-        <button type='submit'>Add task</button>
+        <button class='btn' type='submit'>Add task</button>
     </form>
     <form action='/delete_tasks' method='post'>
-        <button type='submit'>Delete All</button>
+        <button class='btn' type='submit'>Delete All</button>
     </form>
     </div>
   </body>

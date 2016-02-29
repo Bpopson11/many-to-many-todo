@@ -6,6 +6,9 @@
     <title>To Do List</title>
 </head>
 <body>
+    <div class="jumbotron">
+        <h1>Categories</h1>
+    </div>
     <div class="container">
     <h1>{{ category.getName }}</h1>
 
@@ -24,11 +27,13 @@
         <input id="category_id" name="category_id" type="hidden" value="{{ category.getId }}">
         <label for="task_id">Select a task</label>
         <select id='task_id' name='task_id' type='text'>
+        {% if all_tasks is not empty %}
           {% for task in all_tasks %}
             <option value="{{ task.getId }}"> {{ task.getDescription }} </option>
           {% endfor %}
+          {% endif %}
         </select>
-        <button type='submit'>Add task</button>
+        <button class='btn' type='submit'>Add task</button>
     </form>
 
     <p><a href="/categories/{{ category.getId }}/edit">Edit this category</a></p>
